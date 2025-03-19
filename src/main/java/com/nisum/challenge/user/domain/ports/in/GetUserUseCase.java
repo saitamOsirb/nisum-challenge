@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import com.nisum.challenge.user.domain.models.User;
 
-public interface GetUserUserCase {
+public interface GetUserUseCase {
 	Optional<User> getUser(String id);
 
 	List<User> getAllUser();
