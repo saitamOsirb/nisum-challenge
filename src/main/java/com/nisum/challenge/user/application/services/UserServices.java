@@ -2,6 +2,8 @@ package com.nisum.challenge.user.application.services;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
+
 import com.nisum.challenge.user.domain.models.User;
 import com.nisum.challenge.user.domain.ports.in.CreateUserUseCase;
 import com.nisum.challenge.user.domain.ports.in.DeleteUserUseCase;
@@ -30,12 +32,12 @@ public class UserServices implements CreateUserUseCase, GetUserUseCase, DeleteUs
 	}
 
 	@Override
-	public boolean deleteUser(String user) {
+	public boolean deleteUser(UUID user) {
 		return deleteUserUseCase.deleteUser(user);
 	}
 
 	@Override
-	public Optional<User> getUser(String id) {
+	public Optional<User> getUser(UUID id) {
 		return getUserUseCase.getUser(id);
 	}
 

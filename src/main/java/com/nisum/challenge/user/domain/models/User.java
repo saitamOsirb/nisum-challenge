@@ -1,13 +1,15 @@
 package com.nisum.challenge.user.domain.models;
 
+import java.util.UUID;
+
 public class User {
 
 
-	public String getId() {
+	public UUID getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 
@@ -59,7 +61,7 @@ public class User {
 		this.countryCode = countryCode;
 	}
 
-	private String id;
+	private UUID id;
 	private String name;
 	private String email;
 	private String password;
@@ -67,7 +69,7 @@ public class User {
 	private String cityCode;
 	private String countryCode;
 	
-	public User(String id, String name, String email, String password, String phoneNumber, String cityCode,
+	public User(UUID id, String name, String email, String password, String phoneNumber, String cityCode,
 			String countryCode) {
 		super();
 		this.id = id;

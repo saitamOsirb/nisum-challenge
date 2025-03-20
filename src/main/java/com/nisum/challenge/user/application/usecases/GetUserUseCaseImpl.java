@@ -2,6 +2,7 @@ package com.nisum.challenge.user.application.usecases;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import com.nisum.challenge.user.domain.models.User;
 import com.nisum.challenge.user.domain.ports.in.GetUserUseCase;
@@ -16,7 +17,7 @@ public class GetUserUseCaseImpl implements GetUserUseCase {
 	}
 
 	@Override
-	public Optional<User> getUser(String id) {
+	public Optional<User> getUser(UUID id) {
 		return userRepositoryPort.findById(id);
 	}
 
